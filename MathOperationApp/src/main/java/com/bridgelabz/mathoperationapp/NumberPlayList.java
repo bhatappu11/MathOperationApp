@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 
 public class NumberPlayList {
 	public static void main(String[] args) {
@@ -44,6 +45,13 @@ public class NumberPlayList {
 	//implicit lambda function
 	list.forEach(n->{
 		System.out.println("Implicit lambda implementation value: "+n);
+	});
+	System.out.println("------------------");
+	
+	//lambda to print double
+	Function<Integer, Double> doubleFunction = Integer::doubleValue;
+	list.forEach(n->{
+		System.out.println("lambda double value::"+doubleFunction.apply(n));
 	});
 	}	
 }
