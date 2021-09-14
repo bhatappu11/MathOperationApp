@@ -74,5 +74,8 @@ public class NumberPlayList {
 							  .map(doubleFunction)
 							  .collect(Collectors.toList());
 	System.out.println("Double list: "+doubleList);
-	}	
+	System.out.println("------------------");
+	}
+	
+	
 }
