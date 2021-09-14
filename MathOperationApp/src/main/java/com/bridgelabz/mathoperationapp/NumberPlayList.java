@@ -120,6 +120,13 @@ public class NumberPlayList {
 	boolean noneMultipleOfSix = list.stream().noneMatch(i -> i>0 && i%6 ==0);
 	System.out.println("all even: "+allEven+" ,one even: "+oneEven+" ,none are multiple of six: "+noneMultipleOfSix);
 	
+	System.out.println("------------------");
+	//sort the list
+	List<Integer> sortedList = list.stream()
+							   .sorted()
+							   .collect(Collectors.toList());
+	System.out.println("Sorted list: "+sortedList);
+	
 	}
 	
 	
