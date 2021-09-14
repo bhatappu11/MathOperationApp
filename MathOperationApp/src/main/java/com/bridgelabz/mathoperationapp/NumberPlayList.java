@@ -107,7 +107,14 @@ public class NumberPlayList {
 						.orElse(null);
 	System.out.println("Maximum number: "+maximumNumber);
 	System.out.println("------------------");
-		
+	
+	//stream reduce to get sum
+	Integer sum = list.stream()
+				 .reduce(0,Integer::sum);
+	long count = list.stream().count();
+	System.out.println("Sum: "+sum+" and Avg is: "+(sum/count));
+	System.out.println("------------------");
+			
 	
 	}
 	
