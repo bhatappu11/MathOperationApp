@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class NumberPlayList {
 	public static void main(String[] args) {
@@ -67,5 +69,10 @@ public class NumberPlayList {
 		System.out.println("stream impl value: "+n);
 	});
 	System.out.println("------------------");
+	//stream map operation to store
+	List<Double> doubleList = list.stream()
+							  .map(doubleFunction)
+							  .collect(Collectors.toList());
+	System.out.println("Double list: "+doubleList);
 	}	
 }
