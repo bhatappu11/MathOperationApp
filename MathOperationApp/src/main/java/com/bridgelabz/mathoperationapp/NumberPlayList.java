@@ -61,5 +61,11 @@ public class NumberPlayList {
 	list.forEach(n->{
 		System.out.println("Check for even: "+n+":"+isEvenFunction.test(n));
 	});
+	System.out.println("------------------");
+	//processing the stream
+	list.stream().forEach(n->{
+		System.out.println("stream impl value: "+n);
+	});
+	System.out.println("------------------");
 	}	
 }
