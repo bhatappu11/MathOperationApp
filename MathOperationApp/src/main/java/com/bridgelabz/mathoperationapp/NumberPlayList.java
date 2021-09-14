@@ -69,12 +69,21 @@ public class NumberPlayList {
 		System.out.println("stream impl value: "+n);
 	});
 	System.out.println("------------------");
-	//stream map operation to store
+	//stream map and collection operation to transform and store
 	List<Double> doubleList = list.stream()
 							  .map(doubleFunction)
 							  .collect(Collectors.toList());
 	System.out.println("Double list: "+doubleList);
 	System.out.println("------------------");
+	//stream map operation to store
+	List<Double> evenList = list.stream()
+							.filter(isEvenFunction)	
+							.map(doubleFunction)
+							.collect(Collectors.toList());
+	System.out.println("Even Double list: "+evenList);
+	System.out.println("------------------");
+		
+	
 	}
 	
 	
