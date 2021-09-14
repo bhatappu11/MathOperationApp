@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 public class NumberPlayList {
 	public static void main(String[] args) {
 		List<Integer> list = new ArrayList<>();
-		for(int i=0;i<10;i++) {
+		for(int i=1;i<=10;i++) {
 			list.add(i);
 		}
 		Iterator<Integer> itr = list.iterator();
@@ -82,7 +82,16 @@ public class NumberPlayList {
 							.collect(Collectors.toList());
 	System.out.println("Even Double list: "+evenList);
 	System.out.println("------------------");
-		
+	
+	//stream findFirst and peek operation
+	Integer firstNumber = list.stream()
+			.filter(isEvenFunction)
+			.peek(n -> System.out.println("peek even number: "+n))
+			.findFirst()
+			.orElse(null);
+	System.out.println("First even number: "+firstNumber);
+	System.out.println("------------------");
+	
 	
 	}
 	
