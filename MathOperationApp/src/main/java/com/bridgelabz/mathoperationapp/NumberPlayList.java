@@ -114,7 +114,11 @@ public class NumberPlayList {
 	long count = list.stream().count();
 	System.out.println("Sum: "+sum+" and Avg is: "+(sum/count));
 	System.out.println("------------------");
-			
+	//cheack all even,single even or none
+	boolean allEven = list.stream().allMatch(isEvenFunction);
+	boolean oneEven = list.stream().anyMatch(isEvenFunction);
+	boolean noneMultipleOfSix = list.stream().noneMatch(i -> i>0 && i%6 ==0);
+	System.out.println("all even: "+allEven+" ,one even: "+oneEven+" ,none are multiple of six: "+noneMultipleOfSix);
 	
 	}
 	
